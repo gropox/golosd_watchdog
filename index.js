@@ -27,15 +27,20 @@ async function checkStatus() {
 
     const ok = Math.abs(now - btime) <= (30 * 1000);
 
+    const korrektor = await golos.getAccount("korrektor");
+
+
     return {
         ok,
-        block : props.block
+        block: props.block,
+        korrektor
     };
 }
 
 async function sendStatus(chatid, status) {
     const message = `Статус : ${status.ok ? "OK" : "Блок старше 30 секунд!"}
-Последний блок: ${status.block}`;
+Последний блок: ${status.block}
+На балансе у Корректора ${status.korrektor.balance} и ${status.korrektor.sbd_balance}`;
 
     await bot.sendMessage(chatid, message, { parse: "Markdown" });    
 }
