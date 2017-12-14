@@ -1,6 +1,6 @@
 {
     "websocket" : "wss://ws.golos.io",
-    "token" : "479249830:AAEjyN3bBc97CC_HkwVY-IFBc9GoC6vjrqY",
+    "token" : "",
     "chats" : [191909222]
 
 }
