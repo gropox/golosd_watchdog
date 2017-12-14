@@ -40,7 +40,7 @@ async function checkStatus() {
 async function sendStatus(chatid, status) {
     const message = `Статус : ${status.ok ? "OK" : "Блок старше 30 секунд!"}
 Последний блок: ${status.block}
-На балансе у Корректора ${status.korrektor.balance} и ${status.korrektor.sbd_balance}`;
+На балансе у Корректора  ${status.korrektor.balance} и ${status.korrektor.sbd_balance}`;
 
     await bot.sendMessage(chatid, message, { parse: "Markdown" });    
 }
